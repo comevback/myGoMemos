@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func arrays() {
 	original := []int{10, 20, 30, 40, 50}
 
 	// Method 1: Direct slicing
