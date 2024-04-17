@@ -312,3 +312,16 @@ for index, value := range userNames {
 ![custom_PUT](./custom_PUT.png)
 
 <https://www.bilibili.com/video/BV1NJ411r7vd?p=2&vd_source=e2f6ca112db9a4d4b95eb7b2668125fa>
+
+## 请求体
+
+可以用net/url包来组织请求参数
+
+```go
+params := make(url.Values) //定义一个值
+params.Add("name", "Xu") //添加姓名参数
+params.Add("age", "25") //添加年龄参数
+
+params.Encode() //组合到一起 name=Xu&age=25
+request.URL.RawQuery = params.Encode() //加到请求地址后
+```
